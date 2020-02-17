@@ -1,3 +1,3 @@
 # Defense_Game  
 
-Hi
+EliotJang and SeonghyukJang projects
