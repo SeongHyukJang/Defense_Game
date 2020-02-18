@@ -4,14 +4,19 @@ using UnityEngine;
 
 public class Enemy : MonoBehaviour
 {
-    public float speed = 10f;
+    //public GameObject WaveSpawner;
+    public float speed = 4f;
+    public int def = 0;
 
+    private bool flag = true;
     private Transform target;
     private int wavepointIndex = 0;
+    //private int checkpoint = 0;
 
     void Start()
     {
         target = WayPoints.points[0];
+        transform.Rotate(0, 180, 0);
     }
 
     void Update()
@@ -24,25 +29,44 @@ public class Enemy : MonoBehaviour
             GetNextWaypoint();
 
         }
+
+        
     }
 
     void GetNextWaypoint()
     {
-        if (wavepointIndex >= WayPoints.points.Length - 1)
+        if (!(flag) && target == WayPoints.points[0])
         {
-            //todo: 적 방어력 1 증
+            def++;
         }
 
-        if (wavepointIndex == 4)
+        if (flag)
         {
-            wavepointIndex = 0;
-            target = WayPoints.points[wavepointIndex];
-        }
-        else
-        {
+            flag = false;
             wavepointIndex++;
             target = WayPoints.points[wavepointIndex];
         }
+        
+        else if (wavepointIndex == 3)
+        {
+            
+            transform.Rotate(0, -90, 0);
+            wavepointIndex = 0;
+            target = WayPoints.points[wavepointIndex];
+        }
+        else // wavepointIndex = 0, 1, 2
+        {
+            transform.Rotate(0, -90, 0);
+            wavepointIndex++;
+            target = WayPoints.points[wavepointIndex];
+        }
+
+        
+    }
+
+    public void OnDestroy()
+    {
+        
     }
 
 }
