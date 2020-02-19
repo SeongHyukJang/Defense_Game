@@ -795,10 +795,10 @@ GameObject:
   m_Component:
   - component: {fileID: 400048}
   - component: {fileID: 9500000}
-  - component: {fileID: 362851178396937656}
+  - component: {fileID: -6528434781957951505}
   m_Layer: 0
   m_Name: FreeLichHP
-  m_TagString: Enemy
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -838,7 +838,7 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
---- !u!114 &362851178396937656
+--- !u!114 &-6528434781957951505
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -850,5 +850,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ec2b8a876a05e468db30e9fb406a2e11, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 4
-  def: 0
+  tower: {fileID: 115737610557479704, guid: e137ee75867bfc1419f89d0745e67a0e, type: 3}
+  speed: 50
