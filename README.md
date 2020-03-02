@@ -1,3 +1,3 @@
 # Defense_Game  
 
-EliotJang and SeonghyukJang projects
+**Eliot Jang** and **SeonghyukJang** collaborate project
