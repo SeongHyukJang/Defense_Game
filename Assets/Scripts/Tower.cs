@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Tower : MonoBehaviour
 {
@@ -22,28 +23,34 @@ public class Tower : MonoBehaviour
     public GameObject bulletPrefab;
     public Transform firePoint;
 
+    private int Activate_Skill_Prob = 0;
+    private SkillEffect Skill_Effect;
+    public static List<Image> Available_Skill_Image_List = new List<Image>();
+    private List<SkillEffect> Skill_Effects_List;
+    
+
     void Start()
     {
+        Skill_Effects_List = DataBaseManager.skillEffects;
         InvokeRepeating("UpdateTarget", 0f, 0.5f);
-   
     }
     void UpdateTarget()
     {
         GameObject[] enemies = GameObject.FindGameObjectsWithTag(enemyTag);
         float shortestDistance = Mathf.Infinity;
         GameObject nearestEnemy = null;
-
-        foreach(GameObject enemy in enemies)
+        
+        foreach (GameObject enemy in enemies)
         {
             float distanceToEnemy = Vector3.Distance(transform.position, enemy.transform.position);
-            if(distanceToEnemy < shortestDistance)
+            if (distanceToEnemy < shortestDistance)
             {
                 shortestDistance = distanceToEnemy;
                 nearestEnemy = enemy;
             }
         }
 
-        if(nearestEnemy != null && shortestDistance <= range)
+        if (nearestEnemy != null && shortestDistance <= range)
         {
             target = nearestEnemy.transform;
         }
@@ -60,6 +67,7 @@ public class Tower : MonoBehaviour
         Vector3 dir = target.position - transform.position;
         Quaternion lookRotation = Quaternion.LookRotation(dir);
         Vector3 rotation = Quaternion.Lerp(PartToRotate.rotation, lookRotation, Time.deltaTime * turnSpeed).eulerAngles;
+        //Vector3 rotation = lookRotation.eulerAngles;
         PartToRotate.rotation = Quaternion.Euler(0f, rotation.y, 0f);
 
         if(fireCountdown <= 0f)
@@ -69,11 +77,29 @@ public class Tower : MonoBehaviour
         }
 
         fireCountdown -= Time.deltaTime;
-        
+
     }
 
     void Shoot()
     {
+        Activate_Skill_Prob = Random.Range(1, 101);
+
+
+        foreach (Image img in Available_Skill_Image_List)
+        {
+            //foreach (SkillEffect skill_effect in Skill_Effects_List)
+            //{
+            //    if (skill_effect.Skill_Image == img.sprite)
+            //    {
+            //        Skill_Effect = skill_effect;
+            //        Debug.Log(Skill_Effect.Skill_ID);
+            //        break;
+            //    }
+            //    else { Debug.Log("Error"); }
+            //}
+        }
+
+
         GameObject bulletGO = (GameObject)Instantiate(bulletPrefab, firePoint.position, firePoint.rotation);
         Bullet bullet = bulletGO.GetComponent<Bullet>();
            

@@ -1,72 +1,93 @@
-﻿
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Enemy : MonoBehaviour
 {
-    //public GameObject WaveSpawner;
-    public float speed = 4f;
-    public int def = 0;
+    //public GameObject tower;
+    public int moneyGain = 100;
+    public float speed = 50f;
 
-    private bool flag = true;
+    public int startHealth = 100;
+
+    public float meetSpeed = 10f;
+
     private Transform target;
-    private int wavepointIndex = 0;
-    //private int checkpoint = 0;
+    private float health;
+
+    public Image healthBar;
+    private int waypointCount = 0;
 
     void Start()
     {
-        target = WayPoints.points[0];
-        transform.Rotate(0, 180, 0);
-    }
+        target = Waypoints.points[0];
 
+        //transform.Rotate(0, 228.461539f, 0);
+        
+
+        health = startHealth;
+    }
+    
     void Update()
     {
+        
+        //transform.RotateAround(tower.transform.position, Vector3.down, speed*Time.deltaTime );
+        //transform.position += transform.forward * speed * Time.deltaTime;
+        //transform.Rotate(0f, -1f, 0f);
+
         Vector3 dir = target.position - transform.position;
         transform.Translate(dir.normalized * speed * Time.deltaTime, Space.World);
-         
-        if (Vector3.Distance(transform.position, target.position) <= 0.4f)
+
+        //Enemy look Foward. Reference youtuber Brackeys.
+        // And message pops
+        if (dir != Vector3.zero)
+        {
+            Quaternion enemyLook = Quaternion.LookRotation(dir);
+            Vector3 rotation = Quaternion.Lerp(transform.rotation, enemyLook, Time.deltaTime * meetSpeed).eulerAngles;
+            transform.rotation = Quaternion.Euler(0f, rotation.y, 0f);
+        }
+        
+        
+
+        if (Vector3.Distance(transform.position, target.position) <= 0.3f)
         {
             GetNextWaypoint();
-
         }
-
-        
     }
 
     void GetNextWaypoint()
     {
-        if (!(flag) && target == WayPoints.points[0])
+        if (waypointCount == Waypoints.points.Length - 1)
         {
-            def++;
+            waypointCount = 1;
+            target = Waypoints.points[waypointCount];
+            waypointCount++;
         }
-
-        if (flag)
+        else
         {
-            flag = false;
-            wavepointIndex++;
-            target = WayPoints.points[wavepointIndex];
+            waypointCount++;
+            target = Waypoints.points[waypointCount];
         }
-        
-        else if (wavepointIndex == 3)
-        {
-            
-            transform.Rotate(0, -90, 0);
-            wavepointIndex = 0;
-            target = WayPoints.points[wavepointIndex];
-        }
-        else // wavepointIndex = 0, 1, 2
-        {
-            transform.Rotate(0, -90, 0);
-            wavepointIndex++;
-            target = WayPoints.points[wavepointIndex];
-        }
-
-        
+        //transform.Rotate(0, -13.846153f, 0);
     }
 
-    public void OnDestroy()
+    public void TakeDamage(int amount)
     {
-        
+        health -= amount;
+
+        healthBar.fillAmount = health / startHealth;
+
+        if(health <= 0)
+        {
+            Die();
+        }
     }
 
+    void Die()
+    {
+        PlayerStats.Money += moneyGain;
+        Destroy(gameObject);
+    }
+
+    
 }
