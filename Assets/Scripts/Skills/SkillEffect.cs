@@ -20,11 +20,19 @@ public class SkillEffect
         this.Damage = _Damage;
         this.Skill_Prob = _Skill_Prob;
         this.Skill_Image = Resources.Load("Skills/" + _skill_ID.ToString(), typeof(Sprite)) as Sprite;
-        this.Skill_Effect = Resources.Load("Skill Effects/" + _skill_ID,typeof(GameObject)) as GameObject;
+        //this.Skill_Effect = Resources.Load("Skill Effects/" + _skill_ID,typeof(GameObject)) as GameObject;
+        this.Skill_Effect = Resources.Load("Skill Effects/1001", typeof(GameObject)) as GameObject;
     }
 
-    public void ShowEffect()
+    public void ActivateSkill()
     {
-        Debug.Log(this.Skill_ID);
+        //Debug.Log(this.Skill_ID);
+    }
+    
+
+    void OnDrawGizmosSelected()
+    {
+        Gizmos.color = Color.red;
+        Gizmos.DrawSphere(this.Skill_Effect.transform.position, this.Radius);
     }
 }
