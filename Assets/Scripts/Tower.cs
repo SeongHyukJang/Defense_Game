@@ -37,22 +37,16 @@ public class Tower : MonoBehaviour
     void UpdateTarget()
     {
         GameObject[] enemies = GameObject.FindGameObjectsWithTag(enemyTag);
-        float shortestDistance = Mathf.Infinity;
-        GameObject nearestEnemy = null;
-        
-        foreach (GameObject enemy in enemies)
+        GameObject enemy = null;
+
+        if(enemies.Length != 0)
         {
-            float distanceToEnemy = Vector3.Distance(transform.position, enemy.transform.position);
-            if (distanceToEnemy < shortestDistance)
-            {
-                shortestDistance = distanceToEnemy;
-                nearestEnemy = enemy;
-            }
+            enemy = enemies[0];
         }
 
-        if (nearestEnemy != null && shortestDistance <= range)
+        if (enemy != null)
         {
-            target = nearestEnemy.transform;
+            target = enemy.transform;
         }
         else
         {
@@ -67,6 +61,7 @@ public class Tower : MonoBehaviour
         Vector3 dir = target.position - transform.position;
         Quaternion lookRotation = Quaternion.LookRotation(dir);
         Vector3 rotation = Quaternion.Lerp(PartToRotate.rotation, lookRotation, Time.deltaTime * turnSpeed).eulerAngles;
+        //Vector3 rotation = lookRotation.eulerAngles;
         PartToRotate.rotation = Quaternion.Euler(0f, rotation.y, 0f);
 
         if(fireCountdown <= 0f)
@@ -95,7 +90,7 @@ public class Tower : MonoBehaviour
             }
             if(Activate_Skill_Prob <= Skill_Effect.Skill_Prob)
             {
-                Skill_Effect.ShowEffect();
+                Skill_Effect.ActivateSkill();
             }
 
         }
