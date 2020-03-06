@@ -24,10 +24,14 @@ public class Tower : MonoBehaviour
     public Transform firePoint;
 
     private int Activate_Skill_Prob = 0;
-    private SkillEffect Skill_Effect;
+
+    
+    private SkillEffect _Skill_Effect;
     public static List<Image> Available_Skill_Image_List = new List<Image>();
     private List<SkillEffect> Skill_Effects_List;
-    
+
+    GameObject enemy = null;
+
 
     void Start()
     {
@@ -37,7 +41,6 @@ public class Tower : MonoBehaviour
     void UpdateTarget()
     {
         GameObject[] enemies = GameObject.FindGameObjectsWithTag(enemyTag);
-        GameObject enemy = null;
 
         if(enemies.Length != 0)
         {
@@ -78,19 +81,22 @@ public class Tower : MonoBehaviour
     {
         Activate_Skill_Prob = Random.Range(1, 101);
 
+        
+
+
         foreach(Image img in Available_Skill_Image_List)
         {
             foreach(SkillEffect skill_effect in Skill_Effects_List)
             {
                 if(img.sprite == skill_effect.Skill_Image)
                 {
-                    Skill_Effect = skill_effect;
+                    _Skill_Effect = skill_effect;
                     break;
                 }
             }
-            if(Activate_Skill_Prob <= Skill_Effect.Skill_Prob)
+            if(Activate_Skill_Prob <= _Skill_Effect.Skill_Prob && enemy != null)
             {
-                Skill_Effect.ActivateSkill();
+                DamageWithSkill.ActivateSkill(_Skill_Effect, enemy);
             }
 
         }
