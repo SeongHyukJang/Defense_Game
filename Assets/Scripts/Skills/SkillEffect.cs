@@ -20,8 +20,7 @@ public class SkillEffect
         this.Damage = _Damage;
         this.Skill_Prob = _Skill_Prob;
         this.Skill_Image = Resources.Load("Skills/" + _skill_ID.ToString(), typeof(Sprite)) as Sprite;
-        //this.Skill_Effect = Resources.Load("Skill Effects/" + _skill_ID,typeof(GameObject)) as GameObject;
-        this.Skill_Effect = Resources.Load("Skill Effects/1006", typeof(GameObject)) as GameObject;
+        this.Skill_Effect = Resources.Load("Skill Effects/" + _skill_ID,typeof(GameObject)) as GameObject;
     }
     void OnDrawGizmosSelected()
     {
