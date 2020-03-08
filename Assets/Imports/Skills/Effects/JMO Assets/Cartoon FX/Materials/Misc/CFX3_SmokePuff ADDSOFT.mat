@@ -6,8 +6,18 @@ Material:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
+<<<<<<< HEAD
   m_Name: CFX3_SmokePuff ADDSOFT
   m_Shader: {fileID: 202, guid: 0000000000000000f000000000000000, type: 0}
+=======
+<<<<<<< HEAD:Assets/Imports/Skills/Effects/JMO Assets/Cartoon FX/Materials/Misc/CFX3_SmokePuff MULT.mat
+  m_Name: CFX3_SmokePuff MULT
+  m_Shader: {fileID: 4800000, guid: d09abe9036011f94a9e27ccc73cea0ac, type: 3}
+=======
+  m_Name: CFX3_SmokePuff ADDSOFT
+  m_Shader: {fileID: 202, guid: 0000000000000000f000000000000000, type: 0}
+>>>>>>> master:Assets/Imports/Skills/Effects/JMO Assets/Cartoon FX/Materials/Misc/CFX3_SmokePuff ADDSOFT.mat
+>>>>>>> master
   m_ShaderKeywords: 
   m_LightmapFlags: 4
   m_EnableInstancingVariants: 0

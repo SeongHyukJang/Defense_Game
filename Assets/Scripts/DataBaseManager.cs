@@ -16,6 +16,7 @@ public class DataBaseManager : MonoBehaviour
 
         skillList_Normal.Add(new Skill(1000, "빛", "기본 활입니다", Skill.Skill_Type.Normal));
         skillList_Normal.Add(new Skill(1001, "불기둥", "기본 불기둥입니다", Skill.Skill_Type.Normal));
+<<<<<<< HEAD
         skillList_Normal.Add(new Skill(1002, "레이저", "기본 레이저입니다", Skill.Skill_Type.Normal));
         skillList_Normal.Add(new Skill(1003, "독성 식물", "기본 덩쿨입니다", Skill.Skill_Type.Normal));
         skillList_Normal.Add(new Skill(1004, "점화", "기본 점화입니다", Skill.Skill_Type.Normal));
@@ -23,6 +24,15 @@ public class DataBaseManager : MonoBehaviour
         skillList_Normal.Add(new Skill(1006, "번개", "기본 번개입니다", Skill.Skill_Type.Normal));
         skillList_Normal.Add(new Skill(1007, "아이스 볼", "기본 아이스 볼입니다", Skill.Skill_Type.Normal));
         skillList_Normal.Add(new Skill(1008, "치명타", "기본 치명타입니다", Skill.Skill_Type.Normal));
+=======
+        skillList_Normal.Add(new Skill(1002, "독성 식물", "기본 덩쿨입니다", Skill.Skill_Type.Normal));
+        skillList_Normal.Add(new Skill(1003, "점화", "기본 점화입니다", Skill.Skill_Type.Normal));
+        skillList_Normal.Add(new Skill(1004, "중력장", "기본 중력장입니다", Skill.Skill_Type.Normal));
+        skillList_Normal.Add(new Skill(1005, "번개", "기본 번개입니다", Skill.Skill_Type.Normal));
+        skillList_Normal.Add(new Skill(1006, "토네이도", "기본 토네이도입니다", Skill.Skill_Type.Normal));
+        skillList_Normal.Add(new Skill(1007, "치명타", "기본 치명타입니다", Skill.Skill_Type.Normal));
+        
+>>>>>>> master
 
         skillList_Hyper.Add(new Skill(2000, "빛의 심판", "각성 활입니다", Skill.Skill_Type.Hyper));
         skillList_Hyper.Add(new Skill(2001, "메테오", "각성 메테오입니다", Skill.Skill_Type.Hyper));
@@ -34,6 +44,7 @@ public class DataBaseManager : MonoBehaviour
         skillList_Hyper.Add(new Skill(2007, "얼음 초월", "각성 얼음 초월입니다", Skill.Skill_Type.Hyper));
         skillList_Hyper.Add(new Skill(2008, "사형선고", "각성 사형선고입니다", Skill.Skill_Type.Hyper));
 
+<<<<<<< HEAD
         skillEffects.Add(new SkillEffect(1000, 0, 20, 10));
         skillEffects.Add(new SkillEffect(1001, 3, 20, 20));
         skillEffects.Add(new SkillEffect(1002, 0, 20, 30));
@@ -43,5 +54,15 @@ public class DataBaseManager : MonoBehaviour
         skillEffects.Add(new SkillEffect(1006, 3, 20, 19));
         skillEffects.Add(new SkillEffect(1007, 3, 20, 23));
         skillEffects.Add(new SkillEffect(1008, 3, 20, 50));
+=======
+        skillEffects.Add(new SkillEffect(1000, 0, 20, 20));
+        skillEffects.Add(new SkillEffect(1001, 3, 20, 20));
+        skillEffects.Add(new SkillEffect(1002, 0, 20, 20));
+        skillEffects.Add(new SkillEffect(1003, 0, 20, 20));
+        skillEffects.Add(new SkillEffect(1004, 3, 20, 20));
+        skillEffects.Add(new SkillEffect(1005, 3, 20, 20));
+        skillEffects.Add(new SkillEffect(1006, 3, 20, 20));
+        skillEffects.Add(new SkillEffect(1007, 3, 20, 20));
+>>>>>>> master
     }
 }

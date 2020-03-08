@@ -6,7 +6,15 @@ Material:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
+<<<<<<< HEAD
   m_Name: CFX4_Anim_WiggleLine Add
+=======
+<<<<<<< HEAD:Assets/Imports/Skills/Effects/JMO Assets/Cartoon FX/Materials/Symbols/CFX2_HeartBrokenSlice.mat
+  m_Name: CFX2_HeartBrokenSlice
+=======
+  m_Name: CFX4_Anim_WiggleLine Add
+>>>>>>> master:Assets/Imports/Skills/Effects/JMO Assets/Cartoon FX/Materials/Misc/CFX4_Anim_WiggleLine Add.mat
+>>>>>>> master
   m_Shader: {fileID: 200, guid: 0000000000000000f000000000000000, type: 0}
   m_ShaderKeywords: 
   m_LightmapFlags: 4
@@ -18,6 +26,7 @@ Material:
     serializedVersion: 3
     m_TexEnvs:
     - _MainTex:
+<<<<<<< HEAD
         m_Texture: {fileID: 2800000, guid: cd895235a201703448c77a2952188cd1, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
@@ -25,7 +34,28 @@ Material:
     - _InvFade: 1
     m_Colors:
     - _Color: {r: 1, g: 1, b: 1, a: 1}
+=======
+<<<<<<< HEAD:Assets/Imports/Skills/Effects/JMO Assets/Cartoon FX/Materials/Symbols/CFX2_HeartBrokenSlice.mat
+        m_Texture: {fileID: 2800000, guid: 9864efbfd97a1d141aaef379143ac011, type: 3}
+=======
+        m_Texture: {fileID: 2800000, guid: cd895235a201703448c77a2952188cd1, type: 3}
+>>>>>>> master:Assets/Imports/Skills/Effects/JMO Assets/Cartoon FX/Materials/Misc/CFX4_Anim_WiggleLine Add.mat
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    m_Floats:
+    - _InvFade: 1.0892537
+    m_Colors:
+    - _Color: {r: 1, g: 1, b: 1, a: 1}
+<<<<<<< HEAD:Assets/Imports/Skills/Effects/JMO Assets/Cartoon FX/Materials/Symbols/CFX2_HeartBrokenSlice.mat
+    - _EmisColor: {r: 1, g: 1, b: 1, a: 0}
+    - _TintColor: {r: 0.5019608, g: 0.5019608, b: 0.5019608, a: 0.5019608}
+=======
+>>>>>>> master
     - _TintColor: {r: 0.5, g: 0.5, b: 0.5, a: 0.5019608}
 --- !u!1002 &2100001
 EditorExtensionImpl:
   serializedVersion: 6
+<<<<<<< HEAD
+=======
+>>>>>>> master:Assets/Imports/Skills/Effects/JMO Assets/Cartoon FX/Materials/Misc/CFX4_Anim_WiggleLine Add.mat
+>>>>>>> master
