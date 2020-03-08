@@ -1,0 +1,178 @@
+fileFormatVersion: 2
+guid: 9ce18553f959a324aae6aa6c6f4ab940
+ModelImporter:
+  serializedVersion: 22
+  fileIDToRecycleName:
+    100000: MouthBGizmo
+    100002: MouthTGizmo
+    100004: Rig
+    100006: RigHead
+    100008: RigHeadGizmo
+    100010: RigLArm1
+    100012: RigLArm1Gizmo
+    100014: RigLArm2
+    100016: RigLArm2Gizmo
+    100018: RigLArmPalm
+    100020: RigLArmPalmGizmo
+    100022: RigMouthB
+    100024: RigMouthL
+    100026: RigMouthLGizmo
+    100028: RigMouthR
+    100030: RigMouthRGizmo
+    100032: RigMouthT
+    100034: RigNeck1
+    100036: RigNeck2
+    100038: RigNeck3
+    100040: RigNeck4
+    100042: RigPelvis
+    100044: RigPelvisGizmo
+    100046: RigRArm1
+    100048: RigRArm1Gizmo
+    100050: RigRArm2
+    100052: RigRArm2Gizmo
+    100054: RigRArmPalm
+    100056: RigRArmPalmGizmo
+    100058: RigRibcage
+    100060: RigRibcageGizmo
+    100062: RigSpine1
+    100064: RigSpine2
+    100066: RigSpine3
+    100068: RigTail1
+    100070: RigTail1Gizmo
+    100072: RigTail2
+    100074: RigTail2Gizmo
+    100076: RigTail3
+    100078: RigTail3Gizmo
+    100080: RigTail4
+    100082: RigTail4Gizmo
+    100084: Toon Queen Worm
+    100086: //RootNode
+    400000: MouthBGizmo
+    400002: MouthTGizmo
+    400004: Rig
+    400006: RigHead
+    400008: RigHeadGizmo
+    400010: RigLArm1
+    400012: RigLArm1Gizmo
+    400014: RigLArm2
+    400016: RigLArm2Gizmo
+    400018: RigLArmPalm
+    400020: RigLArmPalmGizmo
+    400022: RigMouthB
+    400024: RigMouthL
+    400026: RigMouthLGizmo
+    400028: RigMouthR
+    400030: RigMouthRGizmo
+    400032: RigMouthT
+    400034: RigNeck1
+    400036: RigNeck2
+    400038: RigNeck3
+    400040: RigNeck4
+    400042: RigPelvis
+    400044: RigPelvisGizmo
+    400046: RigRArm1
+    400048: RigRArm1Gizmo
+    400050: RigRArm2
+    400052: RigRArm2Gizmo
+    400054: RigRArmPalm
+    400056: RigRArmPalmGizmo
+    400058: RigRibcage
+    400060: RigRibcageGizmo
+    400062: RigSpine1
+    400064: RigSpine2
+    400066: RigSpine3
+    400068: RigTail1
+    400070: RigTail1Gizmo
+    400072: RigTail2
+    400074: RigTail2Gizmo
+    400076: RigTail3
+    400078: RigTail3Gizmo
+    400080: RigTail4
+    400082: RigTail4Gizmo
+    400084: Toon Queen Worm
+    400086: //RootNode
+    4300000: Toon Queen Worm
+    7400000: Take 001
+    9500000: //RootNode
+    13700000: Toon Queen Worm
+  externalObjects: {}
+  materials:
+    importMaterials: 0
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 0
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    importConstraints: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importVisibility: 0
+    importBlendShapes: 1
+    importCameras: 0
+    importLights: 0
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    preserveHierarchy: 0
+    indexFormat: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 0
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 0
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
