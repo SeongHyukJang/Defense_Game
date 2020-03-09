@@ -5,7 +5,7 @@ using UnityEngine.UI;
 
 public class Tower : MonoBehaviour
 {
-    private Transform target;
+    private GameObject target;
 
     [Header("Attributes")]
 
@@ -44,7 +44,7 @@ public class Tower : MonoBehaviour
 
         if(enemies.Length != 0)
         {
-            target = enemies[0].transform;
+            target = enemies[0];
         }
         else
         {
@@ -65,7 +65,7 @@ public class Tower : MonoBehaviour
         if(target == null) { return; }
 
         // target lock on
-        Vector3 dir = target.position - transform.position;
+        Vector3 dir = target.transform.position - transform.position;
         Quaternion lookRotation = Quaternion.LookRotation(dir);
         Vector3 rotation = Quaternion.Lerp(PartToRotate.rotation, lookRotation, Time.deltaTime * turnSpeed).eulerAngles;
         //Vector3 rotation = lookRotation.eulerAngles;
@@ -84,34 +84,37 @@ public class Tower : MonoBehaviour
     void Shoot()
     {
         Activate_Skill_Prob = Random.Range(1, 101);
-        
 
-        foreach(Image img in Available_Skill_Image_List)
+        GameObject bulletGO = (GameObject)Instantiate(bulletPrefab, firePoint.position, firePoint.rotation);
+        Bullet bullet = bulletGO.GetComponent<Bullet>();
+
+        foreach (Image img in Available_Skill_Image_List)
         {
-            foreach(SkillEffect skill_effect in Skill_Effects_List)
+            foreach (SkillEffect skill_effect in Skill_Effects_List)
             {
-                if(img.sprite == skill_effect.Skill_Image)
+                if (img.sprite == skill_effect.Skill_Image)
                 {
                     _Skill_Effect = skill_effect;
                     break;
                 }
             }
-            if(Activate_Skill_Prob <= _Skill_Effect.Skill_Prob)
+            if (Activate_Skill_Prob <= _Skill_Effect.Skill_Prob)
             {
+                if (_Skill_Effect.Skill_ID == 1007)
+                {
+                    Bullet.Skill1007 = true;
+                }
+
                 UpdateSkillEnemy();
                 DamageWithSkill.ActivateSkill(_Skill_Effect, Skill_enemy);
+                
             }
-
         }
-
-
-        GameObject bulletGO = (GameObject)Instantiate(bulletPrefab, firePoint.position, firePoint.rotation);
-        Bullet bullet = bulletGO.GetComponent<Bullet>();
-           
-        if(bullet != null)
+        if (bullet != null)
         {
-            bullet.Seek(target);
+            bullet.Seek(target.transform);
         }
+
     }
 
     void OnDrawGizmosSelected()

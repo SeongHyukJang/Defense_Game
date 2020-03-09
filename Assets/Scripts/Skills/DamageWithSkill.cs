@@ -10,17 +10,22 @@ public class DamageWithSkill : MonoBehaviour
 
     public static void ActivateSkill(SkillEffect _skill_effect, GameObject _enemy)
     {
-        GameObject ImpactEffect = (GameObject)Instantiate(_skill_effect.Skill_Effect, _enemy.transform.position, Quaternion.Euler(-70,0,0) );
-        Destroy(ImpactEffect, 2f);
+        if(_skill_effect.Skill_ID != 1007)
+        {
+            GameObject ImpactEffect = (GameObject)Instantiate(_skill_effect.Skill_Effect, _enemy.transform.position, Quaternion.Euler(-70, 0, 0));
+            Destroy(ImpactEffect, 2f);
+        }
         explosionRadius = _skill_effect.Radius;
         damage = _skill_effect.Damage;
 
         if(explosionRadius > 0f)
         {
             Explode(_enemy.transform);
+            _skill_effect.ExtraSkillEffects();
         }
         else
         {
+            _skill_effect.ExtraSkillEffects();
             Damage(_enemy.transform);
         }
     }
