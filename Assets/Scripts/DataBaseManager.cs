@@ -16,7 +16,7 @@ public class DataBaseManager : MonoBehaviour
 
         skillList_Normal.Add(new Skill(1000, "빛", "기본 활입니다", Skill.Skill_Type.Normal));
         skillList_Normal.Add(new Skill(1001, "불기둥", "기본 불기둥입니다", Skill.Skill_Type.Normal));
-        skillList_Normal.Add(new Skill(1002, "독성 식물", "기본 덩쿨입니다", Skill.Skill_Type.Normal));
+        skillList_Normal.Add(new Skill(1002, "독", "기본 덩쿨입니다", Skill.Skill_Type.Normal));
         skillList_Normal.Add(new Skill(1003, "점화", "기본 점화입니다", Skill.Skill_Type.Normal));
         skillList_Normal.Add(new Skill(1004, "중력장", "기본 중력장입니다", Skill.Skill_Type.Normal));
         skillList_Normal.Add(new Skill(1005, "번개", "기본 번개입니다", Skill.Skill_Type.Normal));
