@@ -6,7 +6,7 @@ public class Enemy : MonoBehaviour
 {
     //public GameObject tower;
     public int moneyGain = 100;
-    public float speed = 50f;
+    public float speed = 10f;
 
     public int startHealth = 100;
 
