@@ -14,6 +14,39 @@ public class SkillEffect
 
     public void ExtraSkillEffects()         // 추가 스킬 효과
     {
+        switch (this.Skill_ID)
+        {
+            case 1000:
+                // 전체체력 퍼뎀
+                // 방깍
+                break;
+            case 1001:
+                // 큰 범위
+                break;
+            case 1002:
+                // 슬로우
+                // 도트뎀
+                break;
+            case 1003:
+                // 도트뎀
+                break;
+            case 1004:
+                // 홀딩(끌어당김)
+                break;
+            case 1005:
+                // 스턴 (3마리)
+                break;
+            case 1006:
+                // 적 띄우기 + 데미지(총 3번)
+                break;
+            case 1007:
+                // 포탄에 추가적인 이펙트
+                // 추가뎀
+                // 100퍼 확률
+                break;
+            default:
+                break;
+        }
 
 
     }
@@ -24,8 +57,8 @@ public class SkillEffect
         this.Damage = _Damage;
         this.Skill_Prob = _Skill_Prob;
         this.Skill_Image = Resources.Load("Skills/" + _skill_ID.ToString(), typeof(Sprite)) as Sprite;
-        //this.Skill_Effect = Resources.Load("Skill Effects/" + _skill_ID,typeof(GameObject)) as GameObject;
-        this.Skill_Effect = Resources.Load("Skill Effects/1007", typeof(GameObject)) as GameObject;
+        this.Skill_Effect = Resources.Load("Skill Effects/" + _skill_ID,typeof(GameObject)) as GameObject;
+        
     }
     void OnDrawGizmosSelected()
     {

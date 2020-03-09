@@ -41,6 +41,6 @@ public class DataBaseManager : MonoBehaviour
         skillEffects.Add(new SkillEffect(1004, 3, 20, 20));
         skillEffects.Add(new SkillEffect(1005, 3, 20, 20));
         skillEffects.Add(new SkillEffect(1006, 3, 20, 20));
-        skillEffects.Add(new SkillEffect(1007, 3, 20, 20));
+        skillEffects.Add(new SkillEffect(1007, 3, 20, 100));
     }
 }

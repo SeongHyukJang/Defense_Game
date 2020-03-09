@@ -5,11 +5,17 @@ using UnityEngine;
 public class Bullet : MonoBehaviour
 {
     private Transform target;
-
+    public static bool Skill1007 = false;
     public float explosionRadius = 0f;
     public float speed = 70f;
     public GameObject impactEffect;
+    private GameObject skill_effect;
     public int damage = 50;
+
+    void Start()
+    {
+        skill_effect = Resources.Load("Skill Effects/1007", typeof(GameObject)) as GameObject;
+    }
     public void Seek(Transform _target)
     {
         target = _target;
@@ -35,12 +41,16 @@ public class Bullet : MonoBehaviour
         transform.LookAt(target);
         
     }
-
     void HitTarget()
     {
+        if(Skill1007)
+        {
+            GameObject _skill_effect = (GameObject)Instantiate(skill_effect, transform.position, transform.rotation);
+            
+        }
         GameObject effectIns = (GameObject)Instantiate(impactEffect, transform.position, transform.rotation);
-        Destroy(effectIns, 5f);
-
+        Destroy(effectIns, 2f);
+        
         if(explosionRadius > 0f)
         {
             Explode();
@@ -64,7 +74,6 @@ public class Bullet : MonoBehaviour
             {
                 Damage(collider.transform);
             }
-
         }
     }
 

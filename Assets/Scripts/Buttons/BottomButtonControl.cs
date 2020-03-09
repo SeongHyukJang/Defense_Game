@@ -78,6 +78,11 @@ public class BottomButtonControl : MonoBehaviour
 
     public void Delete_Skill()
     {
+        if(Selected_Skill.Skill_ID == 1007)
+        {
+            Bullet.Skill1007 = false;
+        }
+
         Deleted_Skill_List.Remove(Selected_Skill);
         Skill_List_Normal.Add(Selected_Skill);
 
