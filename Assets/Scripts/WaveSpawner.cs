@@ -66,7 +66,6 @@ public class WaveSpawner : MonoBehaviour
             default:
                 break;
         }
-
         for (int i = 0; i < waveIndex; i++)
         {
             SpawnEnemy();
