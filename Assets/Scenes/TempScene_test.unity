@@ -1139,6 +1139,11 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 12800000, guid: 4beb055f07aaff244873dec698d0363e,
         type: 3}
+    - target: {fileID: 1518290669548581096, guid: f705fed9a9d5cf7408540435d88bdbfc,
+        type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 426.73047
+      objectReference: {fileID: 0}
     - target: {fileID: 1518290669624667608, guid: f705fed9a9d5cf7408540435d88bdbfc,
         type: 3}
       propertyPath: m_AnchoredPosition.y
@@ -1157,7 +1162,7 @@ PrefabInstance:
     - target: {fileID: 1518290670025897083, guid: f705fed9a9d5cf7408540435d88bdbfc,
         type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -176.49951
+      value: -176.49902
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f705fed9a9d5cf7408540435d88bdbfc, type: 3}
@@ -1576,6 +1581,7 @@ GameObject:
   m_Component:
   - component: {fileID: 525015167}
   - component: {fileID: 525015166}
+  - component: {fileID: 525015168}
   - component: {fileID: 525015165}
   - component: {fileID: 525015164}
   m_Layer: 0
@@ -1598,7 +1604,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   startMoney: 99999
-  startLives: 40
+  startLives: 20
 --- !u!114 &525015165
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1656,6 +1662,37 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &525015168
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 525015163}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d7918dbe790c64e06a361ade73a1e833, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  enemyPrefab1: {fileID: 4455827164297312159, guid: 8bb464bb7e3db4307bf9b08647b3d3d1,
+    type: 3}
+  enemyPrefab1Boss: {fileID: 6254600380530622362, guid: 51f5cd544c64647c6b558dab65c7a36c,
+    type: 3}
+  enemyPrefab2: {fileID: 2879778464649646526, guid: 604644d40e3f74f88abcf7a1018ad1d8,
+    type: 3}
+  enemyPrefab2Boss: {fileID: 638780595971567119, guid: 6049ca38f58e14bf48759e6c74bb451c,
+    type: 3}
+  enemyPrefab3: {fileID: 6928798303329984395, guid: 044e57f9464e046199d1cc6f03d348cd,
+    type: 3}
+  enemyPrefab3Boss: {fileID: 2206742854499899757, guid: c041f24328b094bb08e2dcad73ebc71c,
+    type: 3}
+  enemyPrefab4: {fileID: 6661587253496617862, guid: 88bcbd26906464cd0a6ec102bf8b0b7a,
+    type: 3}
+  enemyPrefab4Boss: {fileID: 1612892249347341142, guid: 02c587e9f1b9246db9f92213d60bb1da,
+    type: 3}
+  spawnPoint: {fileID: 5321908}
+  RoundCountText: {fileID: 358052289}
+  waveCountdownText: {fileID: 358052288}
 --- !u!1001 &525393996
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3568,7 +3605,7 @@ Light:
   m_BounceIntensity: 1
   m_ColorTemperature: 6570
   m_UseColorTemperature: 0
-  m_BoundingSphereOverride: {x: NaN, y: NaN, z: NaN, w: NaN}
+  m_BoundingSphereOverride: {x: 0, y: 0, z: 6.593e-42, w: 1.04e-43}
   m_UseBoundingSphereOverride: 0
   m_ShadowRadius: 0
   m_ShadowAngle: 0

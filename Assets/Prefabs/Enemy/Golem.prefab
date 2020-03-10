@@ -207,11 +207,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ec2b8a876a05e468db30e9fb406a2e11, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  tower: {fileID: 115737610557479704, guid: e137ee75867bfc1419f89d0745e67a0e, type: 3}
   moneyGain: 100
   speed: 50
   startHealth: 300
   healthBar: {fileID: 8624955402536995847}
+  defense: 0
 --- !u!1 &8528263202085179086
 GameObject:
   m_ObjectHideFlags: 0

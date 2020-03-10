@@ -10,13 +10,14 @@ public class Enemy : MonoBehaviour
 
     public float startHealth = 100;
 
-    public float meetSpeed = 10f;
+    private float meetSpeed = 10f;
 
     private Transform target;
     private float health;
 
     public Image healthBar;
     private int waypointCount = 0;
+    public float defense = 0f;
 
     void Start()
     {
@@ -62,6 +63,7 @@ public class Enemy : MonoBehaviour
             waypointCount = 1;
             target = Waypoints.points[waypointCount];
             waypointCount++;
+            defense++;
         }
         else
         {
@@ -73,7 +75,10 @@ public class Enemy : MonoBehaviour
 
     public void TakeDamage(float amount)
     {
-        health -= amount;
+        //health -= amount;
+
+        // 피해량 = 데미지(amount) + 100 / (100+방어력)
+        health -= amount * 100 / (100 + defense);
 
         healthBar.fillAmount = health / startHealth;
 

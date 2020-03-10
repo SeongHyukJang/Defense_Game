@@ -2,7 +2,7 @@
 using System.Collections;
 using UnityEngine.UI;
 
-public class WaveSpawner : MonoBehaviour
+public class WaveSpawner_test : MonoBehaviour
 {
     
     public Transform enemyPrefab1;
@@ -19,11 +19,11 @@ public class WaveSpawner : MonoBehaviour
     //public Transform[] enemyPrefab = { enemy1, enemy2 };
     public Transform spawnPoint;
 
-    private float timeBetweenWaves = 40f; // 1f
-    private float countdown = 10f; // 40f Prepare Skill before Game Start
+    private float timeBetweenWaves = 1f; // 20f
+    private float countdown = 3f; // 40f Prepare Skill before Game Start
     
     private int waveNumber = 0;
-    private int waveIndex = 20; //2
+    private int waveIndex = 2; //20
 
     public Text RoundCountText;
     public Text waveCountdownText;

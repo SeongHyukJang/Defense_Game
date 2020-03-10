@@ -5323,9 +5323,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   moneyGain: 100
   speed: 10
-  startHealth: 100
-  meetSpeed: 10
+  startHealth: 110
   healthBar: {fileID: 8084741943621997576}
+  defense: 0
 --- !u!1 &6661587253496327042
 GameObject:
   m_ObjectHideFlags: 0
