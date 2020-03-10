@@ -9,11 +9,11 @@ public class WaveSpawner : MonoBehaviour
     public Transform enemyPrefab1Boss;
     public Transform enemyPrefab2;
     public Transform enemyPrefab2Boss;
-    /*public Transform enemyPrefab3;
+    public Transform enemyPrefab3;
+    public Transform enemyPrefab3Boss;
     public Transform enemyPrefab4;
-    public Transform enemyPrefab5;
-    public Transform enemyPrefab6;
-    public Transform enemyPrefab7;
+    public Transform enemyPrefab4Boss;
+    /*public Transform enemyPrefab7;
     public Transform enemyPrefab8;
     public Transform enemyPrefab9;*/
     //public Transform[] enemyPrefab = { enemy1, enemy2 };
@@ -49,14 +49,24 @@ public class WaveSpawner : MonoBehaviour
         TextFadeIn.FadeIn(waveNumber);
         RoundCountText.text = (waveNumber).ToString();
 
-        if (waveNumber == 10)
+        switch (waveNumber)
         {
-            Instantiate(enemyPrefab1Boss, spawnPoint.position, spawnPoint.rotation);
+            case 10:
+                Instantiate(enemyPrefab1Boss, spawnPoint.position, spawnPoint.rotation);
+                break;
+            case 20:
+                Instantiate(enemyPrefab2Boss, spawnPoint.position, spawnPoint.rotation);
+                break;
+            case 30:
+                Instantiate(enemyPrefab3Boss, spawnPoint.position, spawnPoint.rotation);
+                break;
+            case 40:
+                Instantiate(enemyPrefab4Boss, spawnPoint.position, spawnPoint.rotation);
+                break;
+            default:
+                break;
         }
-        if (waveNumber == 20)
-        {
-            Instantiate(enemyPrefab2Boss, spawnPoint.position, spawnPoint.rotation);
-        }
+
         for (int i = 0; i < waveIndex; i++)
         {
             SpawnEnemy();
