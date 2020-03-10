@@ -10,7 +10,7 @@ public class Bullet : MonoBehaviour
     public float speed = 70f;
     public GameObject impactEffect;
     private GameObject skill_effect;
-    public int damage = 50;
+    public float damage = 50;
 
     void Start()
     {
@@ -45,8 +45,13 @@ public class Bullet : MonoBehaviour
     {
         if(Skill1007)
         {
-            GameObject _skill_effect = (GameObject)Instantiate(skill_effect, transform.position, transform.rotation);
+            GameObject _skill_effect = (GameObject)Instantiate(skill_effect, transform.position + new Vector3(0,4,0), transform.rotation);
+            damage *= 2f;
             
+        }
+        else
+        {
+            damage *= 0.5f;
         }
         GameObject effectIns = (GameObject)Instantiate(impactEffect, transform.position, transform.rotation);
         Destroy(effectIns, 2f);

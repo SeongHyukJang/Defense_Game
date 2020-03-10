@@ -8,7 +8,7 @@ public class Enemy : MonoBehaviour
     public int moneyGain = 100;
     public float speed = 10f;
 
-    public int startHealth = 100;
+    public float startHealth = 100;
 
     public float meetSpeed = 10f;
 
@@ -71,13 +71,13 @@ public class Enemy : MonoBehaviour
         //transform.Rotate(0, -13.846153f, 0);
     }
 
-    public void TakeDamage(int amount)
+    public void TakeDamage(float amount)
     {
         health -= amount;
 
         healthBar.fillAmount = health / startHealth;
 
-        if(health <= 0)
+        if(health <= 0f)
         {
             Die();
         }
