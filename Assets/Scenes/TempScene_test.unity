@@ -1631,6 +1631,14 @@ MonoBehaviour:
     type: 3}
   enemyPrefab2Boss: {fileID: 638780595971567119, guid: 6049ca38f58e14bf48759e6c74bb451c,
     type: 3}
+  enemyPrefab3: {fileID: 6928798303329984395, guid: 044e57f9464e046199d1cc6f03d348cd,
+    type: 3}
+  enemyPrefab3Boss: {fileID: 2206742854499899757, guid: c041f24328b094bb08e2dcad73ebc71c,
+    type: 3}
+  enemyPrefab4: {fileID: 6661587253496617862, guid: 88bcbd26906464cd0a6ec102bf8b0b7a,
+    type: 3}
+  enemyPrefab4Boss: {fileID: 1612892249347341142, guid: 02c587e9f1b9246db9f92213d60bb1da,
+    type: 3}
   spawnPoint: {fileID: 5321908}
   RoundCountText: {fileID: 358052289}
   waveCountdownText: {fileID: 358052288}
