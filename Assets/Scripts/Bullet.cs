@@ -47,7 +47,6 @@ public class Bullet : MonoBehaviour
         {
             GameObject _skill_effect = (GameObject)Instantiate(skill_effect, transform.position + new Vector3(0,4,0), transform.rotation);
             damage *= 2f;
-            
         }
         else
         {
