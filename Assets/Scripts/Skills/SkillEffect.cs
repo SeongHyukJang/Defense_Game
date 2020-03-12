@@ -15,7 +15,6 @@ public class SkillEffect
     
     private bool canFire;
 
-    
     public void ExtraSkillEffects(Enemy e, float _damage)         // 추가 스킬 효과
     {
         switch (this.Skill_ID)
