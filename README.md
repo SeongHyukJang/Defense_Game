@@ -1,5 +1,14 @@
-# Defense_Game  
+# Tower_Defense_Game_Demo  
 
-**Eliot Jang** and **SeonghyukJang** collaborate project
+**Eliot Jang** and **SeongHyuk Jang** collaborate Project
 
-pull request
+![](https://eliotjang.github.io/assets/images/defense-game/TD-demo.png)  
+
+*****  
+
+We started a project in February.  
+The project still lacks a lot.  
+It aims to launch mobile games before September.  
+
+
+
