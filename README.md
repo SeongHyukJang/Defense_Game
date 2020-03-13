@@ -2,7 +2,7 @@
 
 **Eliot Jang** and **James Jang** collaborate Project
 
-![](https://github.com/eliotjang/Defense_Game/forReadme/TD-demo.png){: .align-center}  
+![](https://eliotjang.github.io/assets/images/defense-game/TD-demo.png){: .align-center}  
 
 *****  
 
