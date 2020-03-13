@@ -11,6 +11,9 @@ public class SkillEffect
     public float Damage;                      // 스킬 데미지
     public GameObject Skill_Effect;         // 스킬 이펙트
     public Sprite Skill_Image;              // 스킬 이미지
+    
+    
+    private bool canFire;
 
     public void ExtraSkillEffects(Enemy e, float _damage)         // 추가 스킬 효과
     {
@@ -26,13 +29,16 @@ public class SkillEffect
                 // 큰 범위
                 break;
             case 1002:
+                //StartCoroutine(DotDamage());
                 // 슬로우
                 // 도트뎀
+                // StartCoroutine??
                 break;
             case 1003:
                 // 도트뎀
                 break;
             case 1004:
+                // joint component?
                 // 홀딩(끌어당김)
                 break;
             case 1005:
@@ -49,8 +55,6 @@ public class SkillEffect
             default:
                 break;
         }
-
-
     }
     public SkillEffect(int _skill_ID, float _Radius, float _Damage, int _Skill_Prob)
     {
@@ -68,4 +72,15 @@ public class SkillEffect
         Gizmos.color = Color.red;
         Gizmos.DrawSphere(this.Skill_Effect.transform.position, this.Radius);
     }
+
+    //IEnumerator DotDamage()
+    //{
+    //    while(true)
+    //    {
+    //        Debug.Log("데미지");
+    //        yield return new WaitForSeconds(1f);
+            
+    //    }
+    //}
+
 }
