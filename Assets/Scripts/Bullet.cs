@@ -52,10 +52,6 @@ public class Bullet : MonoBehaviour
         {
             damage *= 0.5f;
         }
-        else
-        {
-            damage *= 0.5f;
-        }
         GameObject effectIns = (GameObject)Instantiate(impactEffect, transform.position, transform.rotation);
         Destroy(effectIns, 2f);
         

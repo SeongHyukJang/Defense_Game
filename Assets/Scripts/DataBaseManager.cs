@@ -34,13 +34,13 @@ public class DataBaseManager : MonoBehaviour
         skillList_Hyper.Add(new Skill(2007, "얼음 초월", "각성 얼음 초월입니다", Skill.Skill_Type.Hyper));
         skillList_Hyper.Add(new Skill(2008, "사형선고", "각성 사형선고입니다", Skill.Skill_Type.Hyper));
 
-        skillEffects.Add(new SkillEffect(1000, 3, 20, 20));
-        skillEffects.Add(new SkillEffect(1001, 6, 50, 20));
-        skillEffects.Add(new SkillEffect(1002, 3, 10, 20));
-        skillEffects.Add(new SkillEffect(1003, 3, 20, 20));
-        skillEffects.Add(new SkillEffect(1004, 3, 20, 20));
-        skillEffects.Add(new SkillEffect(1005, 3, 20, 20));
-        skillEffects.Add(new SkillEffect(1006, 3, 20, 20));
-        skillEffects.Add(new SkillEffect(1007, 0, 20, 100));
+        skillEffects.Add(new SkillEffect(1000, 3, 5, 40));
+        skillEffects.Add(new SkillEffect(1001, 6, 5, 40));
+        skillEffects.Add(new SkillEffect(1002, 3, 5, 40));
+        skillEffects.Add(new SkillEffect(1003, 3, 5, 40));
+        skillEffects.Add(new SkillEffect(1004, 3, 5, 40));
+        skillEffects.Add(new SkillEffect(1005, 3, 5, 40));
+        skillEffects.Add(new SkillEffect(1006, 3, 5, 40));
+        skillEffects.Add(new SkillEffect(1007, 0, 5, 100));
     }
 }
