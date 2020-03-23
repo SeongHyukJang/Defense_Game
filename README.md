@@ -8,7 +8,7 @@
 
 We started a project in February.  
 The project still lacks a lot.  
-It aims to launch mobile games before September.  
+It aims to launch a mobile game before September.  
 
 
 
