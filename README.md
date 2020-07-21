@@ -1,21 +1,8 @@
 # 타워 디펜스 게임
 
 협업하는 것을 목표로 간단한 디펜스 게임을 제작했습니다.  
+
 아직 미구현입니다.
-
-## 툴
-
-- Unity
-
-## 언어
-
-- C#
-
-## 배운 것
-
-- Git, Github을 이용한 협업(Commit, Pull Request)
-- Unity Collaboration을 이용한 협업
-- 유니티에 코드가 많아질 때 정리하는 센스
 
 ## 게임 규칙 및 플레이 방법
 
@@ -36,6 +23,11 @@
 
 [회의록 살펴보기](https://docs.google.com/document/d/1ZOHq64Pf8SKA58J8JNbPd9CHj39g2_qNgI-CO800ncE/edit?usp=sharing)
 
+## 배운 것
+
+- Git, Github을 이용한 협업(Commit, Pull Request)
+- Unity Collaboration을 이용한 협업
+- 유니티에 코드가 많아질 때 정리하는 센스
 
 ## 스크린샷
 
