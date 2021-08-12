@@ -3,7 +3,16 @@ guid: 0485787fd2bc543459336dc9f99ac4cf
 MonoImporter:
   externalObjects: {}
   serializedVersion: 2
-  defaultReferences: []
+  defaultReferences:
+  - enemyPrefab1: {fileID: 1213788161931097311, guid: 2ee9fec876cd0484d98b63f9b0e29305,
+      type: 3}
+  - enemyPrefab1Boss: {fileID: 6254600380530622362, guid: 51f5cd544c64647c6b558dab65c7a36c,
+      type: 3}
+  - enemyPrefab2: {fileID: 9135923744139380246, guid: e06a56237b96149cd9c01deb07fa032a,
+      type: 3}
+  - spawnPoint: {instanceID: 0}
+  - RoundCountText: {instanceID: 0}
+  - waveCountdownText: {instanceID: 0}
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 
